@@ -7,7 +7,6 @@ def lengthOfLongestSubstring(self, s):
             if j == i:
                 subset = subset[index + 1:]
                 subnum = len(subset)
-
         subset.append(i)
         subnum += 1
         maxnum = max(maxnum, subnum)
