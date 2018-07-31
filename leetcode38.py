@@ -1,20 +1,17 @@
 def countAndSay(self, n):
     seq = "1"
     for i in range(n - 1):
-        result = ""
-        previous = ""
+        result = previous = ""
         count = 0
         for j in seq:
             if j == previous:
                 count += 1
-            elif not previous:
-                previous = j
-                count += 1
             else:
-                result = result + str(count) + previous
+                if previous:
+                    result += str(count) + previous
                 previous = j
                 count = 1
-        result = result + str(count) + previous
+        result += str(count) + previous
         seq = result
     return seq
 
