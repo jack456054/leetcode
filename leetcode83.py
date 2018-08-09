@@ -1,12 +1,18 @@
-def climbStairs(self, n):
-    if not n:
-        return 0
-    a, b = 1, 1
-    for i in range(n - 1):
-        a, b = b, a + b
-    return b
+# Definition for singly-linked list.
+# class ListNode:
+#     def __init__(self, x):
+#         self.val = x
+#         self.next = None
 
 
-if __name__ == '__main__':
-    print(climbStairs('self', 0))
-    print(climbStairs('self', 3))
+class Solution:
+    def deleteDuplicates(self, head):
+        init = head
+        if not head:
+            return head
+        while head.next:
+            if head.next.val == head.val:
+                head.next = head.next.next
+            else:
+                head = head.next
+        return init
