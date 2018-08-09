@@ -2,6 +2,7 @@ def merge(self, nums1, m, nums2, n):
     for index in range(m, m + n):
         nums1[index] = nums2[index - m]
     nums1.sort()
+    # return nums1
 
 
 if __name__ == '__main__':
