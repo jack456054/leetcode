@@ -12,6 +12,6 @@ class Solution:
             return None
         length = len(nums)
         result = TreeNode(nums[length // 2])
-        result.left = self.sortedArrayToBST(nums[:length // 2])
-        result.right = self.sortedArrayToBST(nums[length // 2 + 1:])
+        result.left = Solution.sortedArrayToBST(self, nums[:length // 2])
+        result.right = Solution.sortedArrayToBST(self, nums[length // 2 + 1:])
         return result
