@@ -9,12 +9,19 @@ class Solution:
     #             return currentValue
 
     # (Method 2)
+    # def singleNumber(self, nums):
+    #     nums.sort()
+    #     length = len(nums)
+    #     for index in range(0, length, 2):
+    #         if index == length - 1 or nums[index] != nums[index + 1]:
+    #             return nums[index]
+
+    # (Method 3)
     def singleNumber(self, nums):
-        nums.sort()
-        length = len(nums)
-        for index in range(0, length, 2):
-            if index == length - 1 or nums[index] != nums[index + 1]:
-                return nums[index]
+        result = 0
+        for value in nums:
+            result ^= value
+        return result
 
 
 if __name__ == '__main__':
