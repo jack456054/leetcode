@@ -4,7 +4,6 @@ import math
 class Solution(object):
     def countPrimes(self, n):
         # (Method 1)
-        # count = 1
         # if n <= 2:
         #     return 0
         # primes = [True] * n
