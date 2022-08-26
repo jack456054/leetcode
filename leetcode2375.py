@@ -20,3 +20,4 @@ class Solution:
         if last_c == 'D':
             result[-(conti):] = result[-(conti):][::-1]
         return ''.join(map(str, result))
+
