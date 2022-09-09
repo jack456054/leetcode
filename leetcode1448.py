@@ -8,8 +8,8 @@ class Solution:
     def goodNodes(self, root: TreeNode) -> int:
         self.count = 0
         self._goodNodes(root, float(-inf))
-        return(self.count)
-        
+        return self.count
+
     def _goodNodes(self, root: TreeNode, max_num: float):
         if root.val >= max_num:
             self.count += 1
@@ -18,4 +18,3 @@ class Solution:
             self._goodNodes(root.left, max_num)
         if root.right:
             self._goodNodes(root.right, max_num)
-            

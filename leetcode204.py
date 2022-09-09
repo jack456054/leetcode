@@ -22,7 +22,7 @@ class Solution(object):
         primes[0], primes[1] = False, False
         for number1 in range(2, math.floor(math.sqrt(n)) + 1):
             if primes[number1]:
-                for number2 in range(number1 ** 2, n, number1):
+                for number2 in range(number1**2, n, number1):
                     if primes[number2]:
                         count += 1
                     primes[number2] = False

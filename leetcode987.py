@@ -9,11 +9,11 @@ class Solution:
         self.results = list()
         final_results = list()
         self._verticalTraversal(root, 0, 0)
-        self.results = sorted(self.results, key = lambda x: (x[1], x[0], x[2]))
+        self.results = sorted(self.results, key=lambda x: (x[1], x[0], x[2]))
         for key, group in itertools.groupby(self.results, lambda x: x[1]):
             final_results.append([c[2] for c in group])
-        return(final_results)
-    
+        return final_results
+
     def _verticalTraversal(self, root: Optional[TreeNode], row: int, col: int):
         self.results.append((row, col, root.val))
         if root.left:

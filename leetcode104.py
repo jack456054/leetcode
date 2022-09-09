@@ -10,4 +10,6 @@ class Solution:
     def maxDepth(self, root):
         if not root:
             return 0
-        return 1 + max(Solution.maxDepth(self, root.left), Solution.maxDepth(self, root.right))
+        return 1 + max(
+            Solution.maxDepth(self, root.left), Solution.maxDepth(self, root.right)
+        )

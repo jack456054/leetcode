@@ -38,4 +38,3 @@ class Solution:
                 last_comparision = 0
             last_value = v
         return result
-

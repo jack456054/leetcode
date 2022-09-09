@@ -6,7 +6,9 @@ def generate(self, numRows):
     for i in range(0, numRows - 1):
         pascalNow = []
         for (index, _) in enumerate(result[-1]):
-            pascalNow.append(1) if index == 0 else pascalNow.append(result[-1][index - 1] + result[-1][index])
+            pascalNow.append(1) if index == 0 else pascalNow.append(
+                result[-1][index - 1] + result[-1][index]
+            )
         pascalNow.append(1)
         result.append(pascalNow)
     return result

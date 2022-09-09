@@ -9,10 +9,10 @@
 #         is_prune = True
 #         while is_prune:
 #             if self.check_prune(root): # Base case.
-#                 return None   
+#                 return None
 #             is_prune = self._pruneTree(root)
 #         return root
-        
+
 #     def _pruneTree(self, root: Optional[TreeNode]) -> Optional[TreeNode]:
 #         is_prune, left_is_prune, right_is_prune = False, False, False
 #         if root.left:
@@ -28,12 +28,13 @@
 #             else:
 #                 right_is_prune = self._pruneTree(root.right)
 #         return is_prune or left_is_prune or right_is_prune
-        
-            
+
+
 #     def check_prune(self, root: Optional[TreeNode]) -> bool:
 #         if root.val == 0 and not root.left and not root.right:
 #             return True
 #         return False
+
 
 class Solution:
     def pruneTree(self, root: Optional[TreeNode]) -> Optional[TreeNode]:

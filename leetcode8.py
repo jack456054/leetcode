@@ -1,5 +1,5 @@
-INT_MAX = 2 ** 31 - 1
-INT_MIN = -(2 ** 31)
+INT_MAX = 2**31 - 1
+INT_MIN = -(2**31)
 
 
 class Solution:
@@ -9,7 +9,11 @@ class Solution:
         if not first_word:
             return result
         first_word = first_word[0]
-        if first_word[0] != '-' and first_word[0] != '+' and not first_word[0].isdigit():
+        if (
+            first_word[0] != '-'
+            and first_word[0] != '+'
+            and not first_word[0].isdigit()
+        ):
             return result
         if first_word[0] == '-':
             neg = 1

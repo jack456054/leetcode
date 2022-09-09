@@ -7,7 +7,9 @@ class Solution:
             else:
                 pascalNow = []
                 for index, value in enumerate(result):
-                    pascalNow.append(1) if index == 0 else pascalNow.append(result[index - 1] + result[index])
+                    pascalNow.append(1) if index == 0 else pascalNow.append(
+                        result[index - 1] + result[index]
+                    )
                 pascalNow.append(1)
                 result = pascalNow
         return result

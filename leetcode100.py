@@ -14,6 +14,8 @@ class Solution:
             else:
                 return False
         elif p.val == q.val:
-            return Solution.isSameTree(self, p.left, q.left) and Solution.isSameTree(self, p.right, q.right)
+            return Solution.isSameTree(self, p.left, q.left) and Solution.isSameTree(
+                self, p.right, q.right
+            )
         else:
             return False
